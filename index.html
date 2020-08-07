@@ -8,15 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="js/vidbg.js" defer></script>
     <script src="js/rellax.min.js" defer></script>
+    <script src="js/aos.js" defer></script>
     <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/vidbg.css">
 </head>
 
 <body>
     <header class="header">
-        <img src="img/logo.svg" alt="logo Space X" class="logo" />
-        <nav class="main-nav">
+        <img src="img/logo.svg" alt="logo Space X" class="logo" data-aos="fade-down" />
+        <nav class="main-nav" data-aos="fade-down">
             <ul class="list">
                 <li class="item">
                     <a href="#" class="item-link">Falcon 9</a>
@@ -33,7 +35,7 @@
             </ul>
         </nav>
         <!-- /.main-nav -->
-        <nav class="secondary-nav">
+        <nav class="secondary-nav" data-aos="fade-down">
             <ul class="list">
                 <li class="item">
                     <a href="#" class="item-link">About</a>
@@ -49,17 +51,17 @@
         <!-- /.secondary-nav -->
     </header>
     <section class="main">
-        <h1 class="title">Falcon Heavy</h1>
-        <p class="description">
+        <h1 class="title" data-aos="fade-up" data-aos-delay="600">Falcon Heavy</h1>
+        <p class="description" data-aos="fade-up" data-aos-delay="1000">
             The most powerful operational rocket in the world by a factor of two
         </p>
     </section>
     <!-- /.main -->
-    <div class="video"></div>
+    <div class="video" data-aos="fade-up" data-aos-delay="1500"></div>
     <section class="features">
         <div class="overview">
-            <h2 class="features-title">Falcon Heavy <br />Overview</h2>
-            <table class="table">
+            <h2 class="features-title" data-aos="fade-right">Falcon Heavy <br />Overview</h2>
+            <table class="table" data-aos="fade-right" data-aos-delay="600">
                 <tr>
                     <td class="table-column">HEIGHT</td>
                     <td class="table-column">70 m / <span class="text-grey"> 229.6 ft</span></td>
@@ -88,9 +90,9 @@
                     </td>
                 </tr>
             </table>
-            <img src="img/rocket.png" alt="rocket" class="rocket" data-rellax-speed="9" />
-            <h2 class="features-title">UNMATCHED <br>PERFORMANCE</h2>
-            <p class="features-text">
+            <img src="img/rocket.png" alt="rocket" class="rocket" data-rellax-speed="9" data-rellax-tablet-speed="7" />
+            <h2 class="features-title" data-aos="fade-up-right">UNMATCHED <br>PERFORMANCE</h2>
+            <p class="features-text" data-aos="fade-up-right" data-aos-delay="600">
                 With more than 5 million pounds of thrust at liftoff, Falcon Heavy is the most capable rocket flying. By comparison, the liftoff thrust of the Falcon Heavy equals approximately eighteen 747 aircraft at full power. Falcon Heavy can lift the equivalent
                 of a fully loaded 737 jetliner—complete with passengers, luggage and fuel—to orbit.
             </p>
@@ -98,8 +100,8 @@
     </section>
     <!-- /.features -->
     <footer class="footer">
-        <img src="img/logo.svg" alt="logo Space X" class="logo" />
-        <nav class="footer-nav">
+        <img src="img/logo.svg" alt="logo Space X" class="logo" data-aos="fade-down" data-aos-delay="900" />
+        <nav class="footer-nav" data-aos="fade-down" data-aos-delay="1200">
             <ul class="list">
                 <li class="item">
                     <a href="#" class="item-link">Twitter</a>
@@ -125,11 +127,11 @@
             </ul>
         </nav>
         <!-- /.footer-nav -->
-        <p class="footer-text">
+        <p class="footer-text" data-aos="fade-down" data-aos-delay="1500">
             For additional questions, contact
             <a class="footer-link" href="mailto:rideshare@spacex.com">rideshare@spacex.com</a>
         </p>
-        <a href="#" class="button">Contact us</a>
+        <a href="#" class="button" data-aos="fade-down" data-aos-delay="1800">Contact us</a>
     </footer>
     <!-- /.footer -->
 </body>
