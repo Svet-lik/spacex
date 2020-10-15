@@ -1,21 +1,41 @@
 import React from 'react';
 import logo from '../../logo.svg';
-import './footer.css'
+import './footer.css';
 
-const Footer = () => (
-  <footer class="footer">
-		<img src={logo} alt="logo Space X" class="logo"/>
-		<nav class="footer-nav">
-			<ul class="list">
-				<li class="item"><a href="/" rel="noopener noreferrer" target='_blank' class="item-link">Elon Musk Twitter</a></li>
-				<li class="item"><a href="/" rel="noopener noreferrer" target='_blank' class="item-link">Twitter</a></li>
-				<li class="item"><a href="/" rel="noopener noreferrer" target='_blank' class="item-link">Flickr</a></li>
-				<li class="item"><a href="/" rel="noopener noreferrer" target='_blank' class="item-link">Website</a></li>
+const Footer = ({elon_twitter: elonMask, flickr, twitter, website}) => (
+  <footer className="footer">
+		<img src={logo} alt="logo Space X" className="logo"/>
+		<nav className="footer-nav">
+			<ul className="list">
+				<li className="item">
+					<a href={elonMask} 
+					rel="noopener noreferrer" 
+					target='_blank' 
+					className="item-link">Elon Musk Twitter</a>
+				</li>
+				<li className="item">
+					<a href={twitter} 
+					rel="noopener noreferrer" 
+					target='_blank' 
+					className="item-link">Twitter</a>
+				</li>
+				<li className="item">
+					<a href={flickr} 
+					rel="noopener noreferrer" 
+					target='_blank' 
+					className="item-link">Flickr</a>
+				</li>
+				<li className="item">
+					<a href={website} 
+					rel="noopener noreferrer" 
+					target='_blank' 
+					className="item-link">Website</a>
+				</li>
 			</ul>
 		</nav>
-		<p class="footer-text">
+		<p className="footer-text">
 			For additional questions, contact
-			<a class="footer-link" href="mailto:rideshare@spacex.com"
+			<a className="footer-link" href="mailto:rideshare@spacex.com"
 			>rideshare@spacex.com</a
 			>
 		</p>
