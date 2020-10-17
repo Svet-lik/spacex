@@ -3,7 +3,10 @@ import './home.css';
 import logo from '../../logo.svg'
 
 
-const Home = ({ company }) => (
+const Home = (props) => {
+	
+	const { company } = props;
+	return (
 	<main className="main">
 		<div className="container">
 			<hgroup className="title">
@@ -73,7 +76,7 @@ const Home = ({ company }) => (
 		</div>
 
 	</main>
-);
+)};
 
 
 export default Home;

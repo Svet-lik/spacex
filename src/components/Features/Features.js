@@ -1,5 +1,6 @@
 import React from 'react';
 import RelaxWrapper from 'react-rellax-wrapper';
+import Main from '../Main/Main'; 
 import './features.css';
 
 const rocketImage = {
@@ -9,14 +10,20 @@ const rocketImage = {
 	'Starship': 'starship',
 }
 
-const Features = ({
-	name, 
-	height, 
-	diameter, 
-	mass, 
-	payload_weights: payloadWeight, 
-	description
-}) => (
+const Features = ((props) => {
+
+	const {
+		name, 
+		height, 
+		diameter, 
+		mass, 
+		payload_weights: payloadWeight, 
+		description
+	} = props;
+
+	return (
+		<>
+			<Main rocket={name} /> 
 			<section className="features">
 				<h2 className="features-title">
 					{name} <br/>Overview
@@ -50,7 +57,7 @@ const Features = ({
 					</table>
 					<RelaxWrapper speed={14}>
 						<img
-							src={`./${rocketImage[name]}.png`}
+							src={`../${rocketImage[name]}.png`}
 							alt="rocket"
 							className="rocket"
 						/>
@@ -63,6 +70,8 @@ const Features = ({
 					</article>
 				</div>
 			</section>
-);
+		</>
+)
+	});
 
 export default Features;

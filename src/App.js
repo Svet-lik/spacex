@@ -3,7 +3,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import Main from './components/Main/Main'; 
 import Calendar from './components/Calendar/Calendar';
 import Details from './components/Details/Details';
 import Features from './components/Features/Features';
@@ -57,24 +56,29 @@ class App extends React.Component {
       <BrowserRouter>
         <Header rockets={this.state.rockets} changeRocket={this.changeRocket} />
 
-        <Route exact path='/'>
+        {/* <Route exact path='/'>
           {this.state.company && <Home company={this.state.company}/>}
-        </Route>
+        </Route>   -- это устаревшее объявление, лучше не использовать*/}
 
-        <Route path='/rocket'>
-        <Main rocket={this.state.rocket} /> 
-          {this.state.rocketFeatures && 
-          <Features {...this.state.rocketFeatures} />}
-        </Route>
+        <Route exact 
+          path='/' 
+          render={(props) => {
+            console.log(props);
+            return this.state.company && 
+            <Home company={this.state.company}
+          />}} 
+        />
+        
 
-        <Route path='/calendar'>
-          <Calendar />
-        </Route>
+        <Route 
+          path='/rocket/:rocket'
+          render={(match) => this.state.rocketFeatures && 
+          <Features {...this.state.rocketFeatures} match={match}  />}
+        />
 
-        <Route path='/details'>
+        <Route path='/calendar' component={Calendar} /> 
 
-          <Details />
-        </Route>
+        <Route path='/details/:id' component={Details} /> {/* таким образом создали свойство id в props, которое относится к роуту */}
 
         {this.state.company && <Footer {...this.state.company}/>}   
         </BrowserRouter>
